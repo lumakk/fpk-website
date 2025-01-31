@@ -102,7 +102,7 @@ nav ul li:hover .dropdown {
 }
 
 .dropdown li a::after {
-    content: ''; /* Remove arrow from subitems */
+    content: '';
 }
 
 
@@ -110,16 +110,15 @@ nav ul li:hover .dropdown {
 #slideshow {
     position: relative;
     width: 100%;
-    height: 480px;
+    height: 480px; /* Adjust the height as needed */
     overflow: hidden;
-    background-color: #ddd;
-    z-index: 1;
 }
 
 .slide {
-    display: none;
+    position: absolute;
     width: 100%;
     height: 100%;
+    transition: transform 1s ease-in-out; /* Add sliding effect */
 }
 
 .slide img {
@@ -128,23 +127,24 @@ nav ul li:hover .dropdown {
     object-fit: cover;
 }
 
-.prev, .next {
+button.prev, button.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    color: white;
     border: none;
     padding: 1rem;
     cursor: pointer;
+    z-index: 10;
 }
 
-.prev {
-    left: 0;
+button.prev {
+    left: 10px;
 }
 
-.next {
-    right: 0;
+button.next {
+    right: 10px;
 }
 
 #search {
@@ -155,38 +155,62 @@ nav ul li:hover .dropdown {
 }
 
 .search-container {
-    width: 1200px; /* Set the width to 1400px */
-    height: 200px; /* Set the height to 330px */
+    width: 1200px; /* Set the width to 1200px */
+    height: 350px; /* Set the height to 200px */
     display: flex;
-    align-items: center; /* Center the content vertically */
-    background-color: #ccc; /* Set background color to see the container */
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center items horizontally */
+    background-color: #ce1126; /* Set background color to see the container */
     margin: 40px;
 }
 
+.search-text {
+    margin-bottom: 0.5rem; /* Add space below the text */
+    font-size: 1.2rem; /* Adjust the font size as needed */
+    color: #ffffff; /* Set the font color */
+    text-align: center; /* Center the text */
+    width: 100%; /* Ensure the text takes up the full width */
+}
+
+.search-container input,
+.search-container button {
+    align-self: center; /* Align input and button to the center */
+}
+
 #search input {
-    width: 880px; /* Set the width to 1254px */
+    width: 880px; /* Set the width to 880px */
     height: 72px; /* Set the height to 72px */
-    padding: 0.5rem;
-    border: 1px solid #ccc;
+    padding: 2rem; /* Adjust the padding to control the font margin */
+    border: 1px solid #ffffff;
     border-radius: 4px;
     margin: 1rem;
+    font-size: 30px;
+    font-family: "Poppins", serif;
 }
 
 #search button {
-    width: 270px; /* Set the width to 1254px */
+    width: 270px; /* Set the width to 270px */
     height: 72px; /* Set the height to 72px */
     padding: 1rem; /* Fixed padding */
     font-size: 1.2rem; /* Fixed font size */
     border: none;
     border-radius: 4px;
-    background-color: #333;
-    color: #fff;
+    background-color: #dfa40e;
+    color: #ffffff;
+    font-family: "Poppins", serif;
+    font-weight: 600;
     cursor: pointer;
-    margin-right: 1rem
+    margin-top: 1rem; /* Add margin to the top to adjust position */
 }
 
 #search button:hover {
-    background-color: #555;
+    background-color: #fbff00;
+}
+
+#balita-title {
+    font-size: 3rem;
+    text-align: left; 
+    margin: 1rem 0;
 }
 
 
@@ -194,18 +218,49 @@ nav ul li:hover .dropdown {
     padding: 2rem;
 }
 
-#news article {
-    margin-bottom: 2rem;
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create three columns */
+    gap: 1rem; /* Adjust the gap between items */
 }
+
+.news-item {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center; /* Center the content */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for animation */
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 0px; /* Remove the margin for the image */ 
+}
+
+.news-item h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.news-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.news-item:hover {
+    transform: translateY(-10px); /* Move the card up */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
 
 #about {
     padding: 2rem;
-    background-color: #f9f9f9;
+    background-color: #ce1126;
+    color: #fff;
 }
-
-
-
-
 
 footer {
     background-color: #333;
