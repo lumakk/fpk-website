@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.poppins-light {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+
+body {
+    font-family: "Poppins", serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #ce1126;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo {
+    height: 50px; /* Adjust the height as needed */
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 6rem; /* Increase the gap between elements */
+    position: relative;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem; /* Adjust the font size as needed */
+    display: flex;
+    align-items: center;
+    text-transform: uppercase; /* Make text uppercase */
+}
+
+
+nav ul li a::after {
+    content: '⮟'; /* Add arrow */
+    position: absolute; /* Set position to absolute */
+    bottom: -20px; /* Adjust the distance below the text */
+    left: 50%; /* Center the arrow horizontally */
+    transform: translateX(-50%); /* Center the arrow horizontally */
+    font-size: 0.8rem; /* Adjust the font size as needed */
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    padding: 0.5rem 0;
+    list-style: none;
+    margin: 0;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+.dropdown li {
+    padding: 0.5rem 1rem;
+}
+
+.dropdown li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown li a:hover {
+    background-color: #555;
+}
+
+.dropdown li a::after {
+    content: ''; /* Remove arrow from subitems */
+}
+
+
+
+#slideshow {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+    background-color: #ddd;
+    z-index: 1;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+#search {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #ffffff;
+}
+
+.search-container {
+    width: 1200px; /* Set the width to 1400px */
+    height: 200px; /* Set the height to 330px */
+    display: flex;
+    align-items: center; /* Center the content vertically */
+    background-color: #ccc; /* Set background color to see the container */
+    margin: 40px;
+}
+
+#search input {
+    width: 880px; /* Set the width to 1254px */
+    height: 72px; /* Set the height to 72px */
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 1rem;
+}
+
+#search button {
+    width: 270px; /* Set the width to 1254px */
+    height: 72px; /* Set the height to 72px */
+    padding: 1rem; /* Fixed padding */
+    font-size: 1.2rem; /* Fixed font size */
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 1rem
+}
+
+#search button:hover {
+    background-color: #555;
+}
+
+
+#news {
+    padding: 2rem;
+}
+
+#news article {
+    margin-bottom: 2rem;
+}
+
+#about {
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+
+
+
